@@ -1,5 +1,6 @@
 
 /// Gets the color of a point with the specified value, using the default palette
+/// 
 /// The input is in the range 0-u16::MAX and the output is RGBA
 pub fn get_color(value: u16) -> u32 {
     let blocks = MAP_COLORS_LENGTH - 1;
@@ -23,7 +24,9 @@ pub fn get_color(value: u16) -> u32 {
 
 
 /// Gets the color of a point with the specified value, using the default palette
+/// 
 /// The input is in the range 0-u16::MAX and the output is RGBA
+/// 
 /// This is a function that operates on 8 value chunks, and is easily auto vectorized
 pub fn get_color_block(values: [u16; 8], buf: &mut [u32; 8]) {
 
@@ -49,6 +52,7 @@ pub fn get_color_block(values: [u16; 8], buf: &mut [u32; 8]) {
 }
 
 /// Gets the color of a point with the specified value, using a custom specified palette
+/// 
 /// The input is in the range 0-u16::MAX and the output is RGBA
 pub fn get_color_custom<const X: usize>(value: u16, palette: [u32; X]) -> u32 {
     let blocks = X - 1;
@@ -72,7 +76,9 @@ pub fn get_color_custom<const X: usize>(value: u16, palette: [u32; X]) -> u32 {
 
 
 /// Gets the color of a point with the specified value, using a custom specified palette
+/// 
 /// The input is in the range 0-u16::MAX and the output is RGBA
+/// 
 /// This is a function that operates on 8 value chunks, and is easily auto vectorized
 pub fn get_color_block_custom<const X: usize>(values: [u16; 8], buf: &mut [u32; 8], palette: [u32; X]) {
 
