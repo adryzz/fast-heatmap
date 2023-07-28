@@ -2,7 +2,10 @@
 name = "fast-heatmap"
 version = "0.1.0"
 edition = "2021"
-
+license = "MIT"
+description = "Blazing fast crate to generate heatmap images with data points"
+keywords = ["heatmap",  "data", "image", "graph", "data-analysis"]
+categories = ["visualization", "algorithms", "no-std", "no-std::no-alloc"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

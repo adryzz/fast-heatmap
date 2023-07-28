@@ -1,4 +1,4 @@
-
+#![no_std]
 /// Gets the color of a point with the specified value, using the default palette
 /// 
 /// The input is in the range 0-u16::MAX and the output is RGBA
